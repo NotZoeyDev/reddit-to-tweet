@@ -1,4 +1,4 @@
-import { Table, Model, AutoIncrement, PrimaryKey, Column, DataType, Default } from "sequelize-typescript";
+import { Table, Model, AutoIncrement, PrimaryKey, Column, DataType, Default, Unique } from "sequelize-typescript";
 
 @Table({
   tableName: "Posts"
@@ -12,12 +12,14 @@ export class Post extends Model {
   @Column(DataType.TEXT)
   postTitle: string;
 
+  @Unique
   @Column(DataType.TEXT)
   postID: string;
 
   @Column(DataType.TEXT)
   postURL: string;
 
+  @Unique
   @Column(DataType.TEXT)
   image: string;
 
