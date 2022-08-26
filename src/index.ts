@@ -53,7 +53,7 @@ config.web = options.web;
 config.database = options.database;
 
 const FETCH_INTERVAL = 60 * 1000;
-const POST_INTERVAL = 60 * 1000;
+const POST_INTERVAL = 60 * 15 * 1000;
 
 prepareDatabase(config).then(async () => {
   prepareTwitter(config);
